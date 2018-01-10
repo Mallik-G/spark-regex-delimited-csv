@@ -8,15 +8,11 @@ import scala.collection.mutable
 class RegexDelimitedLineCsvReader
 (
   fieldSep: String = ",",
-  lineSep: String = "\n",
   quote: Char = '"',
   escape: Char = '\\',
   commentMarker: Char = '#',
   ignoreLeadingSpace: Boolean = true,
-  ignoreTrailingSpace: Boolean = true,
-  inputBufSize: Int = 128,
-  maxCols: Int = 20480,
-  maxCharsPerCol: Int = 100000)
+  ignoreTrailingSpace: Boolean = true)
   extends Serializable {
   /**
     * parse a line

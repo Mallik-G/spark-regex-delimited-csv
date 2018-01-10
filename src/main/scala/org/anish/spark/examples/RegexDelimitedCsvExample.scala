@@ -17,7 +17,7 @@ object RegexDelimitedCsvExample {
       .read
       .format("org.anish.spark.regexcsv")
       .option("header", "true")
-      .option("delimiter", ",|;")
+      .option("delimiter", ",;\\s")
       .load(filePath)
 
     df.printSchema()

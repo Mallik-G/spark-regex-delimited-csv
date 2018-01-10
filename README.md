@@ -17,7 +17,7 @@ val df = sparkSession
   .read
   .format("org.anish.spark.regexcsv")
   .option("header", "true")
-  .option("delimiter", ",|;")
+  .option("delimiter", ",;")
   .load("/path/to/file")
 ```
 
